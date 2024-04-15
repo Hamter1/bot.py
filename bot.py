@@ -82,5 +82,5 @@ async def on_message(message):
         await message.channel.send(f'현재 한국 시간은 {formatted_time} 입니다.')
 
 
-access_token = os.environ["BOT_TOKEN"]
+access_token = os.environ['BOT_TOKEN']
 client.run('access_token')
