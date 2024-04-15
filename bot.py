@@ -2,6 +2,7 @@ import discord
 import random
 import pytz
 from datetime import datetime
+import os
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -80,4 +81,6 @@ async def on_message(message):
         formatted_time = korean_time.strftime('%Y-%m-%d %I:%M:%S %p')
         await message.channel.send(f'현재 한국 시간은 {formatted_time} 입니다.')
 
-client.run('MTIyOTAzODI4MTA5MDQwMDMwNw.GN0e_Q.5kS9eguYeHqes9O772hy2WLHMDY-WjJVP21ry4')
+
+access_token = os.environ["BOT_TOKEN"]
+client.run('access_token')
